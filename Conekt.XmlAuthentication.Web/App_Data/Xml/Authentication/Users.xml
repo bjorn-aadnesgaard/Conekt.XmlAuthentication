@@ -1,0 +1,12 @@
+<Users>
+  <User>
+    <Email />
+    <Password />
+    <Salt />
+    <DateCreated />
+    <Verified />
+    <DateVerified />
+    <Token />
+    <Roles />
+  </User>
+</Users>

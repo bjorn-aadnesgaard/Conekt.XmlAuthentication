@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1C44195D-651A-4CE2-893E-D8F6C1F7948D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Conekt.XmlAuthentication.Web</RootNamespace>
+    <AssemblyName>Conekt.XmlAuthentication.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net">
+      <HintPath>packages\BCrypt-Official.0.1.107\lib\BCrypt.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Xml\Authentication\PasswordReset.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\Xml\Authentication\Users.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_UserControls\Demo\Content\Landing.ascx" />
+    <Content Include="App_UserControls\Demo\Footer.ascx" />
+    <Content Include="App_UserControls\Demo\Head.ascx" />
+    <Content Include="App_UserControls\Demo\Navigation.ascx" />
+    <Content Include="App_UserControls\Xml\Authentication\Account-Create.ascx" />
+    <Content Include="App_UserControls\Xml\Authentication\Login.ascx" />
+    <Content Include="App_UserControls\Xml\Authentication\Password-Change.ascx" />
+    <Content Include="App_UserControls\Xml\Authentication\Password-Reset.ascx" />
+    <Content Include="App_WebServices\Xml\Authentication.asmx" />
+    <Content Include="Assets\Scripts\XmlAuthentication.js" />
+    <Content Include="Assets\Scripts\XmlAuthentication.min.js">
+      <DependentUpon>XmlAuthentication.js</DependentUpon>
+    </Content>
+    <Content Include="Assets\Styles\Images\Background.png" />
+    <Content Include="Assets\Styles\Images\Loading.gif" />
+    <Content Include="Assets\Styles\XmlAuth-Template.css" />
+    <Content Include="Assets\Styles\XmlAuth-Template.min.css">
+      <DependentUpon>XmlAuth-Template.css</DependentUpon>
+    </Content>
+    <Content Include="Default.aspx" />
+    <Content Include="Demo\Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="TODO.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Xml.Authentication.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Xml.Authentication.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_UserControls\Demo\Content\Landing.ascx.cs">
+      <DependentUpon>Landing.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_UserControls\Demo\Content\Landing.ascx.designer.cs">
+      <DependentUpon>Landing.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_UserControls\Demo\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_UserControls\Demo\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_UserControls\Demo\Head.ascx.cs">
+      <DependentUpon>Head.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_UserControls\Demo\Head.ascx.designer.cs">
+      <DependentUpon>Head.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_UserControls\Demo\Navigation.ascx.cs">
+      <DependentUpon>Navigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_UserControls\Demo\Navigation.ascx.designer.cs">
+      <DependentUpon>Navigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_UserControls\Xml\Authentication\Account-Create.ascx.cs">
+      <DependentUpon>Account-Create.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_UserControls\Xml\Authentication\Account-Create.ascx.designer.cs">
+      <DependentUpon>Account-Create.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_UserControls\Xml\Authentication\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_UserControls\Xml\Authentication\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_UserControls\Xml\Authentication\Password-Change.ascx.cs">
+      <DependentUpon>Password-Change.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_UserControls\Xml\Authentication\Password-Change.ascx.designer.cs">
+      <DependentUpon>Password-Change.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_UserControls\Xml\Authentication\Password-Reset.ascx.cs">
+      <DependentUpon>Password-Reset.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_UserControls\Xml\Authentication\Password-Reset.ascx.designer.cs">
+      <DependentUpon>Password-Reset.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_WebServices\Xml\Authentication.asmx.cs">
+      <DependentUpon>Authentication.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demo\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demo\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demo\Demo.Master.cs">
+      <DependentUpon>Demo.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demo\Demo.Master.designer.cs">
+      <DependentUpon>Demo.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Assets\Scripts\XmlAuthentication.min.js.map">
+      <DependentUpon>XmlAuthentication.js</DependentUpon>
+    </Content>
+    <Content Include="Demo\Demo.Master" />
+    <None Include="Properties\PublishProfiles\conekt-xmlauth - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\conekt-xmlauth - Web Deploy.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Xml.Authentication.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Xml.Authentication.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Conekt.XmlAuthentication.Configuration\Conekt.XmlAuthentication.Configuration.csproj">
+      <Project>{5b7fedcf-daca-44a1-8f2b-4ccd538e50e4}</Project>
+      <Name>Conekt.XmlAuthentication.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Conekt.XmlAuthentication.Library\Conekt.XmlAuthentication.Library.csproj">
+      <Project>{a6798dee-6d70-4239-a782-cb7221967498}</Project>
+      <Name>Conekt.XmlAuthentication.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60650</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55352/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

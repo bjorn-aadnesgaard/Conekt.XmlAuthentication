@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conekt.XmlAuthentication.Web", "Conekt.XmlAuthentication.Web\Conekt.XmlAuthentication.Web.csproj", "{1C44195D-651A-4CE2-893E-D8F6C1F7948D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A6798DEE-6D70-4239-A782-CB7221967498} = {A6798DEE-6D70-4239-A782-CB7221967498}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conekt.XmlAuthentication.Configuration", "Conekt.XmlAuthentication.Configuration\Conekt.XmlAuthentication.Configuration.csproj", "{5B7FEDCF-DACA-44A1-8F2B-4CCD538E50E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conekt.XmlAuthentication.Library", "Conekt.XmlAuthentication.Library\Conekt.XmlAuthentication.Library.csproj", "{A6798DEE-6D70-4239-A782-CB7221967498}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5B7FEDCF-DACA-44A1-8F2B-4CCD538E50E4} = {5B7FEDCF-DACA-44A1-8F2B-4CCD538E50E4}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C44195D-651A-4CE2-893E-D8F6C1F7948D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C44195D-651A-4CE2-893E-D8F6C1F7948D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C44195D-651A-4CE2-893E-D8F6C1F7948D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C44195D-651A-4CE2-893E-D8F6C1F7948D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B7FEDCF-DACA-44A1-8F2B-4CCD538E50E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B7FEDCF-DACA-44A1-8F2B-4CCD538E50E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B7FEDCF-DACA-44A1-8F2B-4CCD538E50E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B7FEDCF-DACA-44A1-8F2B-4CCD538E50E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6798DEE-6D70-4239-A782-CB7221967498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6798DEE-6D70-4239-A782-CB7221967498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6798DEE-6D70-4239-A782-CB7221967498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6798DEE-6D70-4239-A782-CB7221967498}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
