@@ -17,6 +17,7 @@ TestResults
 loaderio-*.txt
 Web.Local.config
 *.pubxml
+TODO.txt
 
 # Build results
 [Dd]ebug/
