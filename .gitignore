@@ -18,6 +18,7 @@ loaderio-*.txt
 Web.Local.config
 *.pubxml
 TODO.txt
+.svn
 
 # Build results
 [Dd]ebug/
