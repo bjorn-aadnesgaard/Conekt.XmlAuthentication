@@ -1,14 +1,14 @@
-# Conekt.XmlAuthentication #
+# ASP.NET XML Authentication #
 
 Custom authentication for ASP.NET using XML.  
 
 ## Docs ###
 
 #### Project Dependencies ####
-Coming soon  
+Coming soon
 
 #### Browser Support ####
-Coming soon  
+Coming soon
 
 ## Changelog ##
-Coming soon  
+Coming soon
