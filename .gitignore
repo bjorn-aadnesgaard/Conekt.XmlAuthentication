@@ -16,6 +16,7 @@ TestResults
 # Local development files
 loaderio-*.txt
 Web.Local.config
+Properties/PublishProfiles/
 
 # Build results
 [Dd]ebug/
