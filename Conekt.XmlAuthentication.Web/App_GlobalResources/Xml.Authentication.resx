@@ -234,7 +234,7 @@ This email message was auto-generated. Please do not respond.
     <value>&lt;strong&gt;Error&lt;/strong&gt;. Sorry, account registrations are not permitted.</value>
   </data>
   <data name="Registration_Success_RegisteredLoggedIn" xml:space="preserve">
-    <value>&lt;strong&gt;Success&lt;/strong&gt;. Your account has been created and you are now logged in.</value>
+    <value>&lt;strong&gt;Success&lt;/strong&gt;. Your account has been created.</value>
   </data>
   <data name="Registration_Success_RegisteredVerify" xml:space="preserve">
     <value>&lt;strong&gt;Your account has been created&lt;/strong&gt;. To finalize your account setup, please check your email and follow the email verification intructions.</value>

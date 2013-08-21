@@ -293,7 +293,7 @@ namespace Resources.Xml {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;strong&gt;Success&lt;/strong&gt;. Your account has been created and you are now logged in..
+        ///   Looks up a localized string similar to &lt;strong&gt;Success&lt;/strong&gt;. Your account has been created..
         /// </summary>
         internal static string Registration_Success_RegisteredLoggedIn {
             get {
