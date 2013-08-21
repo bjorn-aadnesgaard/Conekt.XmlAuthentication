@@ -19,63 +19,26 @@
 
 			<div class="content">
 
-				<% if (!Page.User.Identity.IsAuthenticated && HasToken && !IsValidToken) { %>
-					<%= Result.Message %>
-				<% } %>
-
-				<%--Password Reset Using Token--%>
-				<% if (!Page.User.Identity.IsAuthenticated && HasToken && IsValidToken) { %>
-
-					<%--Content--%>
-					<div class="row">
-						<div class="col-md-4">
-							<div class="form-group">
-								<label>New Password</label>
-								<input class="form-control" id="newPassword" type="password" />
-							</div>
+				<%--Content--%>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label>New Password</label>
+							<input class="form-control" id="newPassword" type="password" />
 						</div>
 					</div>
+				</div>
 
-					<%--Commands--%>
-					<div class="row">
-						<div class="col-md-4">
-							<input class="btn btn-primary" data-loading-text="Updating" type="submit" value="Update" onclick="xmlauth.passwordChange('<%= Email %>', '<%= Token %>'); return false;" />
-						</div>
+				<%--Commands--%>
+				<div class="row">
+					<div class="col-md-4">
+						<input class="btn btn-primary" data-loading-text="Updating" type="submit" value="Update" onclick="xmlauth.passwordChange(); return false;" />
 					</div>
-
-				<% } else { %>
-					Please <a href="<%= VirtualPathUtility.ToAbsolute(Conekt.XmlAuthentication.Configuration.ConfigurationManager.GetConfiguration().Settings.LoginUrl) %>">login</a> to continue.
-				<% } %>
-
-				<%--Password Reset When Authenticated--%>
-				<% if (Page.User.Identity.IsAuthenticated) { %>
-	
-					<%--Content--%>
-					<div class="row">
-						<div class="col-md-4">
-							<div class="form-group">
-								<label>Old Password</label>
-								<input class="form-control" id="oldPassword" type="password" />
-							</div>
-							<div class="form-group">
-								<label>New Password</label>
-								<input class="form-control" id="newPassword" type="password" />
-							</div>
-						</div>
-					</div>
-
-					<%--Commands--%>
-					<div class="row">
-						<div class="col-md-4">
-							<input class="btn btn-primary" data-loading-text="Updating" type="submit" value="Update" onclick="xmlauth.passwordChange(); return false;" />
-						</div>
-					</div>
-
-				<% } %>
+				</div>
 			</div>
 
 			<div class="success" style="display: none;">
-				You may <a href="<%= VirtualPathUtility.ToAbsolute(Conekt.XmlAuthentication.Configuration.ConfigurationManager.GetConfiguration().Settings.LoginUrl) %>">login</a> with your new password to continue.
+				You may <a href="<%= VirtualPathUtility.ToAbsolute(Conekt.XmlAuthentication.Configuration.ConfigurationManager.GetConfiguration().Settings.LoginUrl) %>" onclick="xmlauth.load('login');">login</a> with your new password to continue.
 			</div>
 		</div>
 	</div>
