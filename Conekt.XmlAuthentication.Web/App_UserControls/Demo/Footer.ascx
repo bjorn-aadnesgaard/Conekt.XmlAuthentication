@@ -13,5 +13,5 @@
 <%--Script references--%>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>
-<script src="/assets/scripts/xmlauthentication.min.js"></script>
-<script src="/assets/scripts/demo.min.js"></script>
+<script src="/assets/scripts/xmlauthentication<%= HttpContext.Current.IsDebuggingEnabled ? "" : ".min"  %>.js"></script>
+<script src="/assets/scripts/demo<%= HttpContext.Current.IsDebuggingEnabled ? "" : ".min"  %>.js"></script>
