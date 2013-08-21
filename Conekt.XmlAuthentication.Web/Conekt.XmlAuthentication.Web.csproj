@@ -77,6 +77,10 @@
     <Content Include="App_UserControls\Xml\Authentication\Password-Change.ascx" />
     <Content Include="App_UserControls\Xml\Authentication\Password-Reset.ascx" />
     <Content Include="App_WebServices\Xml\Authentication.asmx" />
+    <Content Include="Assets\Scripts\Demo.js" />
+    <Content Include="Assets\Scripts\Demo.min.js">
+      <DependentUpon>Demo.js</DependentUpon>
+    </Content>
     <Content Include="Assets\Scripts\XmlAuthentication.js" />
     <Content Include="Assets\Scripts\XmlAuthentication.min.js">
       <DependentUpon>XmlAuthentication.js</DependentUpon>
@@ -88,7 +92,6 @@
       <DependentUpon>XmlAuth-Template.css</DependentUpon>
     </Content>
     <Content Include="Default.aspx" />
-    <Content Include="Demo\Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="TODO.txt" />
     <Content Include="Web.config">
@@ -168,13 +171,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Demo\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Demo\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Demo\Demo.Master.cs">
       <DependentUpon>Demo.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -193,6 +189,9 @@
       <DependentUpon>XmlAuthentication.js</DependentUpon>
     </Content>
     <Content Include="Demo\Demo.Master" />
+    <Content Include="Assets\Scripts\Demo.min.js.map">
+      <DependentUpon>Demo.js</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\conekt-xmlauth - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\conekt-xmlauth - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
