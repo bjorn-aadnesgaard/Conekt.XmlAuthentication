@@ -211,9 +211,15 @@ var xmlauth = {
 			formClear();
 		});
 	},
-	passwordChange: function (email, token) {
+	passwordChange: function () {
 		$('.login .reset .btn').button('loading');
 		xmlauth.alert('reset');
+
+		//Get query string parameters
+		var qs = xmlauth.parameters();
+		email = qs['email'];
+		token = qs['token'];
+
 		$.ajax({
 			type: 'POST',
 			url: '/App_WebServices/Xml/Authentication.asmx/PasswordChange',
@@ -289,6 +295,12 @@ var xmlauth = {
 	load: function (content, callback) {
 		var target = $('#page-content');
 		target.html('<div style=\"text-align: center; padding: 20px 0px;\"><img src=\"/assets/styles/images/loading.gif\" /></div>');
+
+		//Trim query from content
+		if (content.indexOf('?') != -1) {
+			content = content.substring(0, content.indexOf('?'));
+		}
+
 		$.ajax({
 			type: 'POST',
 			url: '/App_WebServices/Xml/Authentication.asmx/Load',
@@ -305,5 +317,23 @@ var xmlauth = {
 				callback.call(this);
 			}
 		});
+	},
+	parameters: function () {
+		//Ref http://stackoverflow.com/a/2880929/612113
+		//This is a variation of the linked function.
+		//Updated to support hashbang query strings
+		var match,
+			pl = /\+/g,  // Regex for replacing addition symbol with a space
+			search = /([^&=]+)=?([^&]*)/g,
+			decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+			query = window.location.hash.replace('#!/', '');
+
+		query = query.substring(query.indexOf('?') + 1);
+
+		var urlParams = {};
+		while (match = search.exec(query))
+			urlParams[decode(match[1])] = decode(match[2]);
+
+		return urlParams;
 	}
 }
