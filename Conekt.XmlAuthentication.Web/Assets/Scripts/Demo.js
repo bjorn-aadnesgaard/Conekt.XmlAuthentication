@@ -1,5 +1,9 @@
 ﻿$(document).ready(function () {
 	xmldemo.load();
+
+	$(window).bind('hashchange', function (e) {
+		xmldemo.load();
+	});
 });
 
 var xmldemo = {
