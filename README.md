@@ -4,7 +4,7 @@ Custom authentication for ASP.NET using XML.
 
 This basic authentication system provides a platform to create and authenticate users.
 
-A web forms demo is available at http://conekt-xmlauth.azurewebsites.net/.
+A web forms demo is available at [http://conekt-xmlauth.azurewebsites.net/](http://conekt-xmlauth.azurewebsites.net/).
 
 ## Installation
 
