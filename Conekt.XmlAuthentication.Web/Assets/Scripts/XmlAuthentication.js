@@ -4,8 +4,6 @@
 	$('.login [data-hide]').on('click', function () {
 		xmlauth.alert('');
 	});
-
-	$('.readme').html('<div style=\"text-align: center; padding-bottom: 20px;\"><img src=\"/assets/styles/images/loading.gif\" /></div>').load('http://markdown.io/_rawhtml/https://raw.github.com/bjorn-aadnesgaard/Conekt.XmlAuthentication/master/README.md', function () { });
 });
 
 var xmlauth = {
@@ -288,7 +286,7 @@ var xmlauth = {
 			$('.login .create .btn').button('reset');
 		});
 	},
-	load: function (content) {
+	load: function (content, callback) {
 		var target = $('#page-content');
 		target.html('<div style=\"text-align: center; padding: 20px 0px;\"><img src=\"/assets/styles/images/loading.gif\" /></div>');
 		$.ajax({
@@ -303,6 +301,9 @@ var xmlauth = {
 			var response = $.parseJSON(jqXHR.responseText);
 			alert(response.Message);
 		}).always(function () {
+			if (typeof callback == 'function') {
+				callback.call(this);
+			}
 		});
 	}
 }
