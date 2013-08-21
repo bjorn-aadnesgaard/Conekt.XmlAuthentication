@@ -171,7 +171,7 @@ namespace Conekt.XmlAuthentication.Web.App_WebServices.Xml
 			fs.Close();
 
 			//Send email
-			string resetUrl = (FormsAuthentication.RequireSSL ? "https://" : "http://") + Context.Request.Url.Host + (Context.Request.Url.Port != 80 && Context.Request.Url.Port != 443 ? ":" + Context.Request.Url.Port : string.Empty) + VirtualPathUtility.ToAbsolute(Conekt.XmlAuthentication.Configuration.ConfigurationManager.GetConfiguration().Settings.PasswordChangeUrl) + "?token=" + token;
+			string resetUrl = (FormsAuthentication.RequireSSL ? "https://" : "http://") + Context.Request.Url.Host + (Context.Request.Url.Port != 80 && Context.Request.Url.Port != 443 ? ":" + Context.Request.Url.Port : string.Empty) + VirtualPathUtility.ToAbsolute(Conekt.XmlAuthentication.Configuration.ConfigurationManager.GetConfiguration().Settings.PasswordChangeUrl) + "?email=" + email + "&token=" + token;
 			MailMessage msg = new MailMessage()
 			{
 				Subject = string.Format(Resources.Xml.Authentication.Email_Subject_PasswordReset, Conekt.XmlAuthentication.Configuration.ConfigurationManager.GetConfiguration().Settings.ApplicationName),
@@ -451,7 +451,7 @@ namespace Conekt.XmlAuthentication.Web.App_WebServices.Xml
 					break;
 
 				default:
-					url +=  "notfound";
+					url += content;
 					break;
 			}
 
