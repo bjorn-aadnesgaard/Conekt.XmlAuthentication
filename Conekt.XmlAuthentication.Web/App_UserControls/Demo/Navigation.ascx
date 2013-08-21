@@ -5,7 +5,6 @@
 		
 		<ul class="nav navbar-nav projects">
 			<li class="dropdown">
-				<%--<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="glyphicon glyphicon-collapse"></b></a>--%>
 				<a class="dropdown-toggle" data-toggle="dropdown">
 					<span class="navbar-toggle">
 						<span class="sr-only">Toggle navigation</span>
@@ -15,8 +14,6 @@
 					</span>
 				</a>
 				<ul class="dropdown-menu pull-left">
-					<%--<li class="dropdown-header"><h2>Projects</h2></li>
-					<li class="divider"></li>--%>
 					<li><a href="#">
 						<span class="glyphicon glyphicon-shopping-cart"></span>
 						<h4>Billing</h4>
@@ -38,7 +35,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/">
+			<a class="navbar-brand" href="/#!/" onclick="xmldemo.start();">
 				<%= Conekt.XmlAuthentication.Configuration.ConfigurationManager.GetConfiguration().Settings.ApplicationName %>
 			</a>
 		</div>
