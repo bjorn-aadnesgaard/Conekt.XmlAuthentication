@@ -4,7 +4,7 @@ Custom authentication for ASP.NET using XML.
 
 This basic authentication system provides a platform to create and authenticate users.
 
-A web forms demo is available at http://conekt-xmlauth.azurewebsites.net/.
+A web forms demo is available at [http://conekt-xmlauth.azurewebsites.net/](http://conekt-xmlauth.azurewebsites.net/).
 
 ## Installation
 
@@ -38,7 +38,8 @@ The authentication system is designed to make use of ajax through ASP.NET web se
 ### Web.config
 
 Your web.config must include the following properties in order to work correctly. Be sure to set the blank properties with your settings
-	
+
+
 	<configSections>
 		<section name="xmlauth" type="Conekt.XmlAuthentication.Configuration.ConfigurationManager, Conekt.XmlAuthentication.Configuration" />
 	</configSections>
@@ -57,6 +58,7 @@ Your web.config must include the following properties in order to work correctly
 	<xmlauth>
 		<settings applicationName="" allowRegistration="true" verificationRequired="false" loginUrl="" passwordResetUrl="" passwordChangeUrl="" />
 	</xmlauth>
+
 
 ## Browser Support
 
