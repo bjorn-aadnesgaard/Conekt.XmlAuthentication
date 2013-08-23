@@ -13,5 +13,14 @@
 <%--Script references--%>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/pagedown/1.0/Markdown.Converter.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/pagedown/1.0/Markdown.Sanitizer.min.js" ></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/highlight.min.js"></script>
+<script src="/assets/scripts/jquery.base64<%= HttpContext.Current.IsDebuggingEnabled ? "" : ".min"  %>.js"></script>
 <script src="/assets/scripts/xmlauthentication<%= HttpContext.Current.IsDebuggingEnabled ? "" : ".min"  %>.js"></script>
 <script src="/assets/scripts/demo<%= HttpContext.Current.IsDebuggingEnabled ? "" : ".min"  %>.js"></script>
+
+<script>
+	hljs.tabReplace = '    ';
+	hljs.initHighlightingOnLoad();
+</script>
