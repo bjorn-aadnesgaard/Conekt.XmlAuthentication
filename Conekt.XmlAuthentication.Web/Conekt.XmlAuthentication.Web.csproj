@@ -81,6 +81,10 @@
     <Content Include="Assets\Scripts\Demo.min.js">
       <DependentUpon>Demo.js</DependentUpon>
     </Content>
+    <Content Include="Assets\Scripts\jquery.base64.js" />
+    <Content Include="Assets\Scripts\jquery.base64.min.js">
+      <DependentUpon>jquery.base64.js</DependentUpon>
+    </Content>
     <Content Include="Assets\Scripts\XmlAuthentication.js" />
     <Content Include="Assets\Scripts\XmlAuthentication.min.js">
       <DependentUpon>XmlAuthentication.js</DependentUpon>
@@ -191,6 +195,9 @@
     <Content Include="Demo\Demo.Master" />
     <Content Include="Assets\Scripts\Demo.min.js.map">
       <DependentUpon>Demo.js</DependentUpon>
+    </Content>
+    <Content Include="Assets\Scripts\jquery.base64.min.js.map">
+      <DependentUpon>jquery.base64.js</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\conekt-xmlauth - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\conekt-xmlauth - Web Deploy.pubxml" />
