@@ -19,7 +19,24 @@ var xmldemo = {
 	},
 	start: function () {
 		xmlauth.load('default', function () {
-			$('.readme').html('<div style=\"text-align: center; padding-bottom: 20px;\"><img src=\"/assets/styles/images/loading.gif\" /></div>').load('http://markdown.io/_rawhtml/https://raw.github.com/bjorn-aadnesgaard/Conekt.XmlAuthentication/master/README.md', function () { });
+			var target = $('.readme');
+			target.html('<div style=\"text-align: center; padding-bottom: 20px;\"><img src=\"/assets/styles/images/loading.gif\" /></div>');
+
+			$.ajax({
+				url: 'https://api.github.com/repos/bjorn-aadnesgaard/conekt.xmlauthentication/readme',
+				dataType: 'json',
+				success: function (data) {
+					var md = $.base64.decode(data['content'].replace(/\s/g, ''))
+
+					var converter = new Markdown.Converter();
+					md = converter.makeHtml(md);
+
+					target.html(md);
+
+					$('pre code').each(function (i, e) { hljs.highlightBlock(e) });
+				}
+			});
+
 		});
 	}
 }
