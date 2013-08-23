@@ -178,6 +178,12 @@ body > form > .content {
 	border-top-color: #999;
 	}
 
+p code {
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	}
+
 .projects li.dropdown {
 	margin-left: 5px;
 	}
