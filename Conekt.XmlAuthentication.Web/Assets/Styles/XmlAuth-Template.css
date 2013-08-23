@@ -225,6 +225,16 @@ p code {
 	background-color: #999;
 	}
 
+.readme h1 {
+	display: none;
+	}
+
+.readme p:nth-child(3),
+.readme p:nth-child(5) {
+	display: none;
+	}
+
+
 .quickmenu {
 	min-height: 20px;
 	}
