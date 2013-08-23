@@ -5,5 +5,6 @@
 
 <%--Styles--%>
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap.min.css" rel="stylesheet" />
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css" rel="stylesheet" />
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/vs.min.css" rel="stylesheet" />
 <link href="/assets/styles/xmlauth-template.min.css" rel="stylesheet" />
