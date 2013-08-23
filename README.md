@@ -72,3 +72,6 @@ The included demo project uses Bootstrap 3.0.0 RC2 and is optimized for use with
 * jQuery client side validation
 * Roles
 * User management structure
+
+Created and maintained by [Bjorn Aadnesgaard](http://conekted.com) 
+
