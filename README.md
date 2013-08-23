@@ -10,19 +10,19 @@ A web forms demo is available at [http://conekt-xmlauth.azurewebsites.net/](http
 
 ### Assets
 
-While styling is optional, a reference to the XMLAuthentication script is required. The script can be found under the __Conekt.XmlAuthentication.Web/Assets/Scripts/__ folder.
+While styling is optional, a reference to the XMLAuthentication script is required. The script can be found under the ```Conekt.XmlAuthentication.Web/Assets/Scripts/``` folder.
 
 ### Data
 
-The storage path for the authentication data files is __ProjectPath/App_Data/XML/Authentication/__. Included in the demo project are XML template files for storing users and password reset requests.
+The storage path for the authentication data files is ```ProjectPath/App_Data/XML/Authentication/```. Included in the demo project are XML template files for storing users and password reset requests.
 
 ### Resources
 
-Email templates and alert messages are stored within the XML.Authentication.resx file found under the __Conekt.XmlAuthentication.Web/App_GlobalResources/__ folder.
+Email templates and alert messages are stored within the XML.Authentication.resx file found under the ```Conekt.XmlAuthentication.Web/App_GlobalResources/``` folder.
 
 ### Templates
 
-Web form templates have been created and included in the demo project and can be found under the __Conekt.XmlAuthentication.Web/App_UserControls/Xml/Authentication__ folder.
+Web form templates have been created and included in the demo project and can be found under the ```Conekt.XmlAuthentication.Web/App_UserControls/Xml/Authentication``` folder.
 
 The templates included are:
 
@@ -33,7 +33,7 @@ The templates included are:
 
 ### Web Services / AJAX
 
-The authentication system is designed to make use of ajax through ASP.NET web services. The web service file (Authentication.asmx) is located under the __Conekt.XmlAuthentication.Web/App_WebServices/Xml/__ folder.
+The authentication system is designed to make use of ajax through ASP.NET web services. The web service file (Authentication.asmx) is located under the ```Conekt.XmlAuthentication.Web/App_WebServices/Xml/``` folder.
 
 ### Web.config
 
@@ -62,7 +62,7 @@ Your web.config must include the following properties in order to work correctly
 
 ## Browser Support
 
-The included demo project uses Bootstrap 3.0.0 RC2 and is optimized for use with mobile devices, IE8+, Firefox and Chrome.
+The included demo project uses Bootstrap 3.0.0 RC2 and is optimized for use with mobile devices, IE9+, Firefox and Chrome.
 
 ## Futures
 
