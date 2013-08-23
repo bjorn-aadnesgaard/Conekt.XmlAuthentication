@@ -40,24 +40,24 @@ The authentication system is designed to make use of ajax through ASP.NET web se
 Your web.config must include the following properties in order to work correctly. Be sure to set the blank properties with your settings
 
 ```csharp
-	<configSections>
-		<section name="xmlauth" type="Conekt.XmlAuthentication.Configuration.ConfigurationManager, Conekt.XmlAuthentication.Configuration" />
-	</configSections>
-	<system.web>
-		<authentication mode="Forms">
-			<forms timeout="15" loginUrl="" name="" slidingExpiration="false" protection="All" requireSSL="false" />
-		</authentication>
-	</system.web>
-	<system.net>
-		<mailSettings>
-			<smtp from="">
-				<network host="" enableSsl="false" userName="" password="" port="587" />
-			</smtp>
-		</mailSettings>
-	</system.net>
-	<xmlauth>
-		<settings applicationName="" allowRegistration="true" verificationRequired="false" loginUrl="" passwordResetUrl="" passwordChangeUrl="" />
-	</xmlauth>
+<configSections>
+	<section name="xmlauth" type="Conekt.XmlAuthentication.Configuration.ConfigurationManager, Conekt.XmlAuthentication.Configuration" />
+</configSections>
+<system.web>
+	<authentication mode="Forms">
+		<forms timeout="15" loginUrl="" name="" slidingExpiration="false" protection="All" requireSSL="false" />
+	</authentication>
+</system.web>
+<system.net>
+	<mailSettings>
+		<smtp from="">
+			<network host="" enableSsl="false" userName="" password="" port="587" />
+		</smtp>
+	</mailSettings>
+</system.net>
+<xmlauth>
+	<settings applicationName="" allowRegistration="true" verificationRequired="false" loginUrl="" passwordResetUrl="" passwordChangeUrl="" />
+</xmlauth>
 ```
 
 ## Browser Support
