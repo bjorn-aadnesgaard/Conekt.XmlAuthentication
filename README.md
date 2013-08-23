@@ -38,7 +38,8 @@ The authentication system is designed to make use of ajax through ASP.NET web se
 ### Web.config
 
 Your web.config must include the following properties in order to work correctly. Be sure to set the blank properties with your settings
-	
+
+```csharp
 	<configSections>
 		<section name="xmlauth" type="Conekt.XmlAuthentication.Configuration.ConfigurationManager, Conekt.XmlAuthentication.Configuration" />
 	</configSections>
@@ -57,6 +58,7 @@ Your web.config must include the following properties in order to work correctly
 	<xmlauth>
 		<settings applicationName="" allowRegistration="true" verificationRequired="false" loginUrl="" passwordResetUrl="" passwordChangeUrl="" />
 	</xmlauth>
+```
 
 ## Browser Support
 
