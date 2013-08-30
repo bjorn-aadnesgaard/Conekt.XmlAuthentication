@@ -1,7 +1,7 @@
 ﻿$(function () {
 	//Ref http://stackoverflow.com/a/13550556/612113
 	//Adds re-usable hide function to boostrap toolset
-	$('.login [data-hide]').on('click', function () {
+	$('body').on('click', '.login [data-hide]', function () {
 		xmlauth.alert('');
 	});
 });
