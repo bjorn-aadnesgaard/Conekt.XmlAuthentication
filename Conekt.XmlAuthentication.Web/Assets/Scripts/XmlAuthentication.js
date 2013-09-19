@@ -4,19 +4,39 @@
 	$('body').on('click', '.login [data-hide]', function () {
 		xmlauth.alert('');
 	});
+
+
+	$('body').on('click', '.login .btn', function () {
+		$(this).button('loading');
+	});
 });
 
 var xmlauth = {
-	login: function () {
-		$('.login .btn').button('loading');
-		xmlauth.alert('reset');
-		$.ajax({
+	login: function (type) {
+		
+		var ajaxRequest = {
 			type: 'POST',
-			url: '/App_WebServices/Xml/Authentication.asmx/Login',
-			data: '{ "email": "' + $('#email').val() + '", "password" : "' + $('#password').val() + '" }',
+			url: '',
+			data: {},
 			contentType: 'application/json; charset=utf-8',
 			dataType: 'json'
-		}).done(function (data) {
+		};
+
+		//Check if this is a social login
+		if (type != undefined) {
+
+
+		//Site login
+		} else {
+			ajaxRequest.url = '/App_WebServices/Xml/Authentication.asmx/Login';
+			ajaxRequest.data = {
+				email: "'" + $('#email').val() + "'",
+				password: "'" + $('#password').val() + "'"
+			};
+		}
+
+		xmlauth.alert('reset');
+		$.ajax(ajaxRequest).done(function (data) {
 
 			//Set the alert content
 			var content = $('.login .alert div');
@@ -43,6 +63,7 @@ var xmlauth = {
 			content.html(response.Message);
 
 		}).always(function () {
+			//Reset the button status
 			$('.login .btn').button('reset');
 		});
 	},
