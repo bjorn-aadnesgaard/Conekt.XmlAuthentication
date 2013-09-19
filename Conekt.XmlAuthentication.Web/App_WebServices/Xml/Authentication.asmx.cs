@@ -427,31 +427,32 @@ namespace Conekt.XmlAuthentication.Web.App_WebServices.Xml
 		public string Load(string content)
 		{
 			string url = "~/app_usercontrols/";
+			string extension = ".ascx";
 
 			switch (content)
 			{
 				case "change":
-					url += "xml/authentication/password-change.ascx";
+					url += "xml/authentication/password-change" + extension;
 					break;
 				
 				case "create":
-					url += "xml/authentication/account-create.ascx";
+					url += "xml/authentication/account-create" + extension;
 					break;
 
 				case "default":
-					url += "demo/content/landing.ascx";
+					url += "demo/content/landing" + extension;
 					break;
 				
 				case "login":
-					url += "xml/authentication/login.ascx";
+					url += "xml/authentication/login" + extension;
 					break;
 
 				case "reset":
-					url += "xml/authentication/password-reset.ascx";
+					url += "xml/authentication/password-reset" + extension;
 					break;
 
 				default:
-					url += content;
+					url += content + extension;
 					break;
 			}
 
