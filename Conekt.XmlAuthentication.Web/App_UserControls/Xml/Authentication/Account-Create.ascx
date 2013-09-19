@@ -45,7 +45,7 @@
 
 		<%--Footer--%>
 		<div class="panel-footer anonymous">
-			<div>Already have an account? <a href="#" onclick="xmlauth.load('login'); return false;">Login</a>.</div>
+			<div>Already have an account? <a href="/#!/login" onclick="xmlauth.load('login');">Login</a>.</div>
 		</div>
 
 	</div>
